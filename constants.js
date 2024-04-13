@@ -1,7 +1,7 @@
 // Global properties - Declaration
 window.__storageKeys = {
   user: "user",
-  isLoggerIn: "isLoggedIn",
+  isLoggedIn: "isLoggedIn",
 };
 
 // Global variable for the Recipes

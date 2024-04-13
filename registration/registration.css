@@ -40,7 +40,26 @@ h1,
 }
 body {
   background-image: url("/assets/restaurant_1.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-attachment: fixed ;  /* Fix position */
+  background-size: cover;  
 }
 
+.overlay {
+  position: absolute;  /* Ensures the overlay lays on top of the background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;  /* Stretches the overlay to cover the entire viewport */
+  background-color: rgba(0, 0, 0, 0.5);  /* Black color with 50% opacity */
+}
+
+@media screen and (max-width: 768px) {
+  #user-registration-form,
+  #user-login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  input + span {
+    display: none;
+  }
+}

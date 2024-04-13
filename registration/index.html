@@ -23,12 +23,13 @@
       crossorigin="anonymous"
     ></script>
     <script src="registration.js"></script>
+    <script src="/constants.js"></script>
   </head>
-  <body>
+  <body class="overlay">
     <div id="container">
-        <h1 >Welcome to the Recipe Radar</h1>
+        <h1 class="text-white">Welcome to the Recipe Radar</h1>
         
-        <h2 class="signupTitle"></h2>
+        <h2 class="signupTitle text-white"></h2>
         <form id="user-registration-form" class="my-3 mx-auto p-5">
                 <label for="username">Name:</label>
                 <input type="text" id="username" required>
@@ -61,7 +62,7 @@
             <button type="button" id="login" class="btn btn-primary">Login</button>
 
         </form>
-        <div id="already">Already have an account? <button type="button" class="btn btn-link loginBtn">Sign In</button></div>
+        <div id="already"  class="text-white">Already have an account? <button type="button" class="btn btn-link loginBtn cursor">Sign In</button></div>
 
     </div>
   </body>
