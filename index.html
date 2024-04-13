@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/jquery-ui-1.12.1.custom/jquery-ui.min.css" />
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
     <!-- Bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
@@ -27,29 +27,102 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img class="logo" src="assets/recipe_radar_logo.jpg"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#"
+          ><img class="logo" src="assets/recipe_radar_logo.jpg"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/recipe_list/index.html">Recipes</a>
             </li>
           </ul>
           <span class="navbar-text">
-            <span class="cursor" id="profile"><i class="bi bi-person-circle"></i><a class="nav-link ms-2" href="/profile/index.html">Profile</a></span>
-           <button type="button" class="btn pt-0"><span id="logbtn">Login</span></button>
+            <span class="cursor" id="profile"
+              ><i class="bi bi-person-circle"></i
+              ><a class="nav-link ms-2" href="/profile/index.html"
+                >Profile</a
+              ></span
+            >
+            <button type="button" class="btn pt-0">
+              <span id="logbtn">Login</span>
+            </button>
           </span>
         </div>
       </div>
     </nav>
     <header class="container-fluid gx-0">
-
       <h1 class="banner text-white text-center">Welcome to Recipe Radar</h1>
     </header>
+    <div class="scrolling-text">
+      Foodie on a Budget? Get Weekly Meal Plans &amp; Save with a
+      Subscription!
+    </div>
+    <main class="container my-3">
+      <div class="w-100">
+        <div class="w-100">
+          <h2 class="text-center py-3">Our Recipe category!</h2>
+        </div>
+        <div class="row mb-4">
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card category-card">
+              <img src="/assets/indian.jpg" class="card-img-top" alt="Indian food" />
+              <div class="dish-category-title">Indian</div>
+              <div class="card-body">
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card category-card">
+              <img src="/assets/japanese.jpg" class="card-img-top" alt="Japanese food" />
+              <div class="dish-category-title">Japanese</div>
+              <div class="card-body">
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card category-card">
+              <img src="/assets/italian.jpg" class="card-img-top" alt="Italian dish" />
+              <div class="dish-category-title">Italian</div>
+              <div class="card-body">
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card cursor" style="height: 100%;">
+              <div class="card-body view-all">
+                <p class="card-text">
+                  <a id="view-all-text">View All <i class="bi bi-arrow-right"></i></a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

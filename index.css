@@ -6,6 +6,7 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 h1,
+h2,
 h3,
 nav {
   font-family: "Bree Serif", serif;
@@ -45,6 +46,58 @@ body {
 }
 label{
   font-weight: bold;
+}
+
+.scrolling-text {
+  text-align: end;
+  width: 100%;  
+  overflow: hidden;
+  animation: scrolltext 10s linear infinite;
+  white-space: nowrap;  
+}
+
+@keyframes scrolltext {
+  from { transform: translateX(0px); }
+  to { transform: translateX(-100%); } /* Adjust distance for scrolling */
+}
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.category-card {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+.card-img-top {
+  height: 200px;
+}
+
+.dish-category-title {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.card-body {
+  background-color: darkslategrey;
+  color: white;
+}
+
+.view-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.view-all:hover  #view-all-text{
+text-decoration: underline;
+}
+
+.container {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 12px;
+    padding: 3rem;
 }
 
 @media screen and (max-width: 768px) {
