@@ -1,68 +1,68 @@
 .banner-section {
     position: relative;
-    height:50vh;
-<<<<<<< Updated upstream
+    height: 50vh;
     background-image: url(/assets/Recipe\ detail\ banner.jpg);
-=======
-    background-image: url(images/main-img.jpg);
->>>>>>> Stashed changes
     background-size: cover;
     background-position: center;
 }
+
 .overlay {
-    position:absolute;
+    position: absolute;
     content: "";
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 0;
 }
+
 .bg-gray-100 {
     background-color: #fcd6d6;
 }
-<<<<<<< Updated upstream
+
 .table>:not(caption)> {
-=======
-.table>:not(caption)>*>* {
->>>>>>> Stashed changes
-    background-color: transparent;
+ background-color: transparent;
 }
+
 .carousel-item {
-    height:420px;
+    height: 420px;
 }
+
 .carousel-item img {
-    height:100%;
+    height: 100%;
     object-fit: cover;
 }
+
 .recipe-desc-box {
-    padding:30px 50px;
+    padding: 30px 50px;
     margin-left: -50px;
 }
 
-<<<<<<< Updated upstream
+
 .recipe-img-box .bxslider li img {
     height: 400px;
     width: 600px;
 }
+
 .recipe-details {
-    padding-left: 50px; /* Adjust as needed */
+    padding-left: 50px;
+    /* Adjust as needed */
 }
 
-=======
->>>>>>> Stashed changes
 .flex-1 {
-    flex:1;
+    flex: 1;
 }
-@media (max-width:991px) {
+
+@media (max-width:1024px) {
     .recipe-desc-box {
-        padding:30px ;
+        padding: 30px;
         margin-left: 0px;
     }
 }
-@media (max-width:575px) {
+
+@media (max-width:768px) {
     td {
-        width:100% !important;
+        width: 100% !important;
     }
 }
