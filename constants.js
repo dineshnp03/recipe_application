@@ -15,11 +15,7 @@ window.__recipes = [
       "Cook spaghetti according to package instructions. In a skillet, cook pancetta or guanciale until crispy. Beat eggs, Parmesan cheese, black pepper, and salt in a bowl. Drain spaghetti and toss with pancetta. Add egg mixture and toss until coated. Serve hot",
     category: "Main Dish",
     origin: "Italy",
-    images:[
-      "https://images.unsplash.com/photo-1551892374-ecf8754cf8b0?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://plus.unsplash.com/premium_photo-1661293877589-b03a9e8fe30e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1622973536968-3ead9e780960?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    ]
+  
   },
   {
     id: 2,
