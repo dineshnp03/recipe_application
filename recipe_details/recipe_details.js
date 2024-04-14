@@ -1,20 +1,9 @@
 $(document).ready(function(){
-    // $('.bxslider').bxSlider({
-    //     auto: true,
-    //     autoControls: true,
-    //     stopAutoOnClick: true,
-    //     pager: true,
-    //     slideWidth: 600,
-    //     pause: 3000 
-    // });
-
     fetchJSDataGET();
 });
 
-
-
 function fetchJSDataGET() {
-    fetch("./constants.js")
+    fetch("../constants.js")
         .then((res) => {
             if (!res.ok) {
                 throw new Error(`HTTP error! Status: ${res.status}`);
@@ -22,6 +11,7 @@ function fetchJSDataGET() {
             return res.text(); 
         })
         .then((jsCode) => {
+            // Evaluate the fetched JavaScript code
             eval(jsCode);
             productsArray = window.__recipes;
             let count = productsArray.length;
@@ -31,6 +21,7 @@ function fetchJSDataGET() {
             console.error("Unable to fetch data:", error);
         });
 }
+
 function changeItem(productsArray, count) {
     let prd_id = sessionStorage.getItem("product_id");
     for (let i = 0; i < count; i++) {
@@ -60,7 +51,3 @@ function changeItem(productsArray, count) {
         }
     }
 }
-
-
-
-

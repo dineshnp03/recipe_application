@@ -1,7 +1,7 @@
 .banner-section {
     position: relative;
     height:50vh;
-    background-image: url(images/main-img.jpg);
+    background-image: url(/assets/japanese.jpg);
     background-size: cover;
     background-position: center;
 }
