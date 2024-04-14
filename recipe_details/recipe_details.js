@@ -40,8 +40,9 @@ function changeItem(productsArray, count) {
                 slideWidth: 600,
                 pause: 3000 
             });
-            // Display recipe details
-            $('.recipe-title').text(product.title);
+
+            $('#recipe_name').text(product.title);
+            
             let ingredients = product.ingredients.split(',');
             let ingredientsHTML = ingredients.map(ingredient => '<li>' + ingredient.trim() + '</li>').join('');
             $('.recipe-ingredients').html('<ul>' + ingredientsHTML + '</ul>');
