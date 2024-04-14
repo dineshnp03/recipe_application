@@ -12,9 +12,14 @@ window.__recipes = [
     ingredients:
       "Spaghetti, Pancetta or guanciale, Eggs, Parmesan cheese, Black pepper, Salt",
     instructions:
-      "Cook spaghetti according to package instructions. In a skillet, cook pancetta or guanciale until crispy. Beat eggs, Parmesan cheese, black pepper, and salt in a bowl. Drain spaghetti and toss with pancetta. Add egg mixture and toss until coated. Serve hot.",
+      "Cook spaghetti according to package instructions. In a skillet, cook pancetta or guanciale until crispy. Beat eggs, Parmesan cheese, black pepper, and salt in a bowl. Drain spaghetti and toss with pancetta. Add egg mixture and toss until coated. Serve hot",
     category: "Main Dish",
     origin: "Italy",
+    images:[
+      "/assests/italian.jpg",
+      "https://images.unsplash.com/photo-1498462440456-0dba182e775b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1459802071246-377c0346da93?q=80&w=1795&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ]
   },
   {
     id: 2,
@@ -334,4 +339,3 @@ window.__origins = [
   "China",
   "Hungary",
 ];
-
