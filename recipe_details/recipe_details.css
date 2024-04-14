@@ -1,7 +1,11 @@
 .banner-section {
     position: relative;
     height:50vh;
+<<<<<<< Updated upstream
     background-image: url(/assets/Recipe\ detail\ banner.jpg);
+=======
+    background-image: url(images/main-img.jpg);
+>>>>>>> Stashed changes
     background-size: cover;
     background-position: center;
 }
@@ -18,7 +22,11 @@
 .bg-gray-100 {
     background-color: #fcd6d6;
 }
+<<<<<<< Updated upstream
 .table>:not(caption)> {
+=======
+.table>:not(caption)>*>* {
+>>>>>>> Stashed changes
     background-color: transparent;
 }
 .carousel-item {
@@ -33,6 +41,7 @@
     margin-left: -50px;
 }
 
+<<<<<<< Updated upstream
 .recipe-img-box .bxslider li img {
     height: 400px;
     width: 600px;
@@ -41,6 +50,8 @@
     padding-left: 50px; /* Adjust as needed */
 }
 
+=======
+>>>>>>> Stashed changes
 .flex-1 {
     flex:1;
 }
