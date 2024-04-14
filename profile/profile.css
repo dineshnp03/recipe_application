@@ -1,0 +1,19 @@
+.ui-tabs .ui-tabs-nav {
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid darkslategrey
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    background-color: darkslategrey;
+    color: #fbecd9;
+    font-weight: bold;
+}
+.ui-tabs .ui-tabs-nav li {
+    color: darkslategrey;
+    background-color: #fbecd9;
+}
+.ui-widget.ui-widget-content {
+    border: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
