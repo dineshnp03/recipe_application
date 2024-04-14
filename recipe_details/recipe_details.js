@@ -11,7 +11,7 @@ function fetchJSDataGET() {
             return res.text(); 
         })
         .then((jsCode) => {
-            // Evaluate the fetched JavaScript code
+           
             eval(jsCode);
             productsArray = window.__recipes;
             let count = productsArray.length;
