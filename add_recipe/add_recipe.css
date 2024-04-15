@@ -35,7 +35,6 @@
     min-height: 100px;
   }
   
-  .btn {
+  #submit {
     display: block;
-    margin: 20px auto 0;
   }

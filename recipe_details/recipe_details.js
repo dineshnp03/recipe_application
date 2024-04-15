@@ -6,9 +6,6 @@ $(document).ready(function () {
         
         $('#profile').show();
         $("#logbtn").text("Logout");
-    } else if(user) {
-        localStorage.setItem(window.__storageKeys.isLoggedIn, true);
-        $(location).attr("href", "/recipe_list");
     }
     else {
         $('#profile').hide();

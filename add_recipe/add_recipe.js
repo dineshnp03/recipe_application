@@ -1,7 +1,10 @@
+// Author: Venkat Lavu
+// Student Id: 8968788
 
-    //console.log(window.__recipes);
+
 $(document).ready(function() {
 
+    // Loggin error check
     let data=window.__recipes
     console.log(data)
     let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn));
@@ -56,11 +59,11 @@ $(document).ready(function() {
             ingredients: ingredients,
             instructions: instructions,
             category: category,
-            origin: origin
+            origin: origin,
+            imgSrc: "/assets/mexican.jpg"
         };
 
         // Push new recipe to data array
-        data.push(newRecipe);
         addRecipe(data, newRecipe);
 
         // Update window.__recipes with the modified data
@@ -68,9 +71,25 @@ $(document).ready(function() {
 
         // Log updated data
         console.log('Updated Recipes Data:', window.__recipes);
-        // Reset form
-     //   $('form')[0].reset();
+
+        // Toaster Data
+        const html = `<div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="submit" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+           
+            <strong class="me-auto">Submitted</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            ${newRecipe.title} is Submitted.
+          </div>
+        </div>
+      </div>`;
+        $('.toaster').append(html);
+        $("form").reset();
     } 
+
 });
 
 });
@@ -81,6 +100,10 @@ function addRecipe(recipes, newRecipe) {
   
     // Add the new recipe to the end of the array
     recipes.push(newRecipe);
+    user.recipes.push(newRecipe);
+    localStorage.setItem(window.__storageKeys.recipes, recipes);
+    localStorage.setItem(window.__storageKeys.user, user);
   
     console.log("Recipe added successfully with ID:", newRecipe.id);
   }
+

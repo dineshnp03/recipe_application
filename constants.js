@@ -6,7 +6,8 @@
 window.__storageKeys = {
   user: "user",
   isLoggedIn: "isLoggedIn",
-  productId: "productId"
+  productId: "productId",
+  recipes: "recipes"
 };
 
 // Global variable for the Recipes
