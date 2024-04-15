@@ -48,18 +48,18 @@ label{
   font-weight: bold;
 }
 
-.scrolling-text {
+ .scrolling-text {
   text-align: end;
   width: 100%;  
   overflow: hidden;
   animation: scrolltext 10s linear infinite;
   white-space: nowrap;  
-}
-
+} 
 @keyframes scrolltext {
   from { transform: translateX(0px); }
   to { transform: translateX(-100%); } /* Adjust distance for scrolling */
 }
+
 .card:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transform: translateY(-5px);

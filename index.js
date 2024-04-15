@@ -1,5 +1,7 @@
 let user = JSON.parse(localStorage.getItem(window.__storageKeys.user));
 $(() => {
+    let textWidth = $(".scrolling-text").width();
+    let containerWidth = $(".scrolling-text").parent().width();
     let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn))
     // isLoggedIn = undefined ? false : true;
     console.log(isLoggedIn)
@@ -15,6 +17,7 @@ $(() => {
         });
     }
 
+
     $('.view-all').click((e) => {
         e.preventDefault();
 
@@ -27,7 +30,7 @@ $(() => {
         else {
             $(location).attr("href", "/registration");
         }
-    })
+    });
 
     $('#logbtn').click((e) => { 
         console.log("coming here")
@@ -40,4 +43,4 @@ $(() => {
         }
     });
 
-})
+});

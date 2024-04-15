@@ -2,7 +2,16 @@ const recipes =  window.__recipes;
 console.log(recipes);
 
 $(() => {
-  
+  let isLoggedIn = window.__storageKeys.isLoggedIn;
+  console.log(isLoggedIn);
+  if (isLoggedIn) {
+    $("#logbtn").text("Logout");
+  } else {
+    $("#logbtn").click((e) => {
+      e.preventDefault();
+      $(location).attr("href", "/registration");
+    });
+  }
     $(document).ready(function(){
         $('.bxslider').bxSlider(
             {
