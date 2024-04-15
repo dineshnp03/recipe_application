@@ -1,9 +1,8 @@
 // get recipes data from window.__recipes
 const recipes = window.__recipes;
 
-$(() => {
-  // function to execute when document is ready
-
+  $(() => {
+  
   $("#add-recipe").hide();
   let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn));
 
@@ -25,6 +24,7 @@ $(() => {
             $(location).attr("href", "/registration");
         }); 
   }
+  
   $(document).ready(function () {
     // bxslider plugin for image slider
     $(".bxslider").bxSlider({
@@ -151,6 +151,7 @@ $(() => {
     }
   });
 });
+
 
 function getId(productId) {
   localStorage.setItem(window.__storageKeys.productId, productId);
