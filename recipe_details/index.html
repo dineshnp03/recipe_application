@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="/jquery-ui-1.12.1.custom/jquery-ui.min.css" />
     <link rel="stylesheet" href="/index.css" />
     <link rel="stylesheet" href="recipe_details.css" />
+
+    <!-- Add bxSlider CSS file -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+    />
+
     <!-- Bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
@@ -25,5 +32,80 @@
     <script src="recipe_details.js"></script>
     <script src="/constants.js"></script>
   </head>
-  <body></body>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html"><img class="logo" src="/assets/recipe_radar_logo.jpg"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/recipe_list/index.html">Recipes</a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            <span class="cursor me-3" id="profile"
+              ><i class="bi bi-person-circle"></i
+              ><a class="nav-link ms-2" href="/profile/index.html"
+                >Profile</a
+              ></span
+            >
+            <button type="button" class="btn btn-success pt-0" id="logbtn">Login
+            </button>
+          </span>
+        </div>
+      </div>
+    </nav>
+    <section class="banner-section">
+      <div class="overlay"></div>
+      <div
+        class="container h-100 d-flex align-items-end justify-content-center position-relative"
+      >
+        <h1 class="text-white mb-4" id="recipe_name"></h1>
+      </div>
+    </section>
+    <section class="recipe-details-section py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="recipe-img-box">
+              <ul class="bxslider">
+                <li>
+                  <img src="/assets/spaghetti 1.jpg" alt="Image 1">
+                </li>
+                <li>
+                  <img src="/assets/spaghetti 2.jpg" alt="Image 2">
+                </li>
+                <li>
+                  <img src="/assets/spaghetti 3.jpg" alt="Image 3">
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-lg-5 mt-5" style="margin-left: 60px">
+            <div class="recipe-desc-box bg-gray-100">
+              <h5 class="recipe-title"><strong> Ingredients </strong></h5>
+
+              <h5 class="recipe-ingredients"></h5>
+
+              <div class="d-sm-flex"></div>
+            </div>
+          </div>
+          <h5><strong> Instructions </strong></h5>
+          <h5 class="recipe-instructions"></h5>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script></script>
+  </body>
 </html>
+

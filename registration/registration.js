@@ -123,7 +123,7 @@ $(()=> {
       localStorage.setItem(window.__storageKeys.user, JSON.stringify(user));
       $("#user-login-form").show();
       $("#user-registration-form").hide();
-      $("#already").html(`New User? <a class="loginBtn">Create an Account</a>`);
+      $("#already").html(`New User? <a class="loginBtn cursor">Create an Account</a>`);
       $(".signupTitle").text(`Login`);
     } else {
       $('input + span').css("display", "inline");
@@ -166,14 +166,14 @@ $(()=> {
       // loginFlag = true;
       $("#user-login-form").show();
       $("#user-registration-form").hide();
-      $("#already").html(`New User? <a class="loginBtn">Create an Account</a>`);
+      $("#already").html(`New User? <a class="loginBtn cursor">Create an Account</a>`);
     } else {
       $(".signupTitle").text(`Sign Up`);
       // loginFlag = true;
       $("#user-login-form").hide();
       $("#user-registration-form").show();
       $("#already").html(
-        `Already have an account? <a class="loginBtn">Log In</a>`
+        `Already have an account? <a class="loginBtn cursor">Log In</a>`
       );
     }
     resetListeners();
