@@ -6,7 +6,7 @@ $(() => {
   // function to execute when document is ready
 
   $("#add-recipe").hide();
-  let isLoggedIn = window.__storageKeys.isLoggedIn;
+  let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn));
   console.log(isLoggedIn);
   if (isLoggedIn) {
     $("#add-recipe").show();

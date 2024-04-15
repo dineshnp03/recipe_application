@@ -4,7 +4,7 @@ $(document).ready(function() {
 
     let data=window.__recipes
     console.log(data)
-    let isLoggedIn = window.__storageKeys.isLoggedIn;
+    let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn));
     console.log(isLoggedIn);
     if (isLoggedIn) {
       $("#logbtn").text("Logout");
