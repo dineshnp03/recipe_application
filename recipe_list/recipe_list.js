@@ -12,9 +12,12 @@ $(() => {
         
       });
     });
+    
     const recipeContainer = document.getElementById("recipeContainer");
     
     recipes.forEach(recipe => {
+
+
         const recipeCard = document.createElement("div");
         recipeCard.classList.add("recipe-card");
 
@@ -24,33 +27,49 @@ $(() => {
             img.classList.add("recipe-img");
             recipeCard.appendChild(img);
         }
-    
+        
         const recipeContent = document.createElement("div");
         recipeContent.classList.add("recipe-content");
         recipeCard.appendChild(recipeContent);
     
         const h2 = document.createElement("h2");
-        h2.textContent = recipe.title;
+        const strongTitle = document.createElement("strong");
+        strongTitle.textContent = recipe.title;  
+        h2.appendChild(strongTitle);
         recipeContent.appendChild(h2);
-    
+
         const pIngredients = document.createElement("p");
         pIngredients.classList.add("recipe-ingredients");
-        pIngredients.textContent = "Ingredients: " + recipe.ingredients;
+        const strongIngredientsLabel = document.createElement("strong");
+        strongIngredientsLabel.textContent = "Ingredients:";
+        pIngredients.appendChild(strongIngredientsLabel);
+        const italicIngredients = document.createElement("i");
+        italicIngredients.textContent = recipe.ingredients;
+        pIngredients.appendChild(italicIngredients);
         recipeContent.appendChild(pIngredients);
     
         const pInstructions = document.createElement("p");
         pInstructions.classList.add("recipe-instructions");
-        pInstructions.textContent = "Instructions: " + recipe.instructions;
+        const strongInstructions = document.createElement("strong");
+        strongInstructions.textContent = "Instructions:";
+        pInstructions.appendChild(strongInstructions);
+        pInstructions.innerHTML += " " + recipe.instructions;
         recipeContent.appendChild(pInstructions);
     
         const pcategory = document.createElement("p");
         pcategory.classList.add("recipe-category");
-        pcategory.textContent = "Category: " + recipe.category;
+        const strongCategory = document.createElement("strong");
+        strongCategory.textContent = "Category:";
+        pcategory.appendChild(strongCategory);
+        pcategory.innerHTML += " " + recipe.category;
         recipeContent.appendChild(pcategory);
     
         const porigin = document.createElement("p");
         porigin.classList.add("recipe-origin");
-        porigin.textContent = "Origin: " + recipe.origin;
+        const strongOrigin = document.createElement("strong");
+        strongOrigin.textContent = "Origin:";
+        porigin.appendChild(strongOrigin);
+        porigin.innerHTML += " " + recipe.origin;
         recipeContent.appendChild(porigin);
         
         
