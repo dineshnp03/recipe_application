@@ -87,7 +87,7 @@ $(document).ready(function() {
         </div>
       </div>`;
         $('.toaster').append(html);
-        $("form").reset();
+        resetForm();
     } 
 
 });
@@ -108,3 +108,11 @@ function addRecipe(recipes, newRecipe) {
     console.log("Recipe added successfully with ID:", newRecipe.id);
   }
 
+// Reset Form Fucntionality
+function resetForm() {
+        $('#recipe_name').val() = '';
+          $('#Ingredients').val() = '';
+           $('#Instructions').val() = '';
+          $('select[aria-label="category"]').val() = '';
+          $('select[aria-label="origins"]').val() = '';
+}
