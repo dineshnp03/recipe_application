@@ -4,7 +4,10 @@
 
 
 let user = JSON.parse(localStorage.getItem(window.__storageKeys.user));
+
+//Document Ready
 $(() => {
+    // Checking the user is logged in
     let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn))
     console.log(isLoggedIn)
     if(isLoggedIn && isLoggedIn != null) {
@@ -20,6 +23,8 @@ $(() => {
     }
 
 
+
+// View All functionality , if user is logged in or not , 
     $('.view-all').click((e) => {
         e.preventDefault();
 

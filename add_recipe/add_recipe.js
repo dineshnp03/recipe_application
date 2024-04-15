@@ -1,7 +1,10 @@
+// Author: Venkat Lavu
+// Student Id: 8968788
 
-    //console.log(window.__recipes);
+
 $(document).ready(function() {
 
+    // Loggin error check
     let data=window.__recipes
     console.log(data)
     let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn));
@@ -56,73 +59,51 @@ $(document).ready(function() {
             ingredients: ingredients,
             instructions: instructions,
             category: category,
-            origin: origin
+            origin: origin,
+            imgSrc: "/assets/mexican.jpg"
         };
 
         // Push new recipe to data array
-        data.push(newRecipe);
+        addRecipe(data, newRecipe);
 
         // Update window.__recipes with the modified data
         window.__recipes = data;
 
         // Log updated data
         console.log('Updated Recipes Data:', window.__recipes);
-        // Reset form
-     //   $('form')[0].reset();
-    } /*else {
-        alert('Please fill in all fields.');
-    }*/
-});
+
+        // Toaster Data
+        const html = `<div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="submit" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+           
+            <strong class="me-auto">Submitted</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            ${newRecipe.title} is Submitted.
+          </div>
+        </div>
+      </div>`;
+        $('.toaster').append(html);
+        $("form").reset();
+    } 
 
 });
 
-/*$(document).ready(function() {
-    let data = window.__recipes || []; // Initialize data or get existing data if available
-    console.log(data);
-
-    // Textarea auto-resize
-    $('textarea').each(function() {
-        this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
-    }).on('input', function() {
-        this.style.height = 'auto';
-        this.style.height = (this.scrollHeight) + 'px';
-    });
-
-    // Form submission
-    $('form').submit(function(event) {
-        event.preventDefault(); // Prevent form submission
-
-        // Get form data
-        var recipeName = $('#Recipe_name').val(); // Changed from 'Recipe name' to 'Recipe_name'
-        var ingredients = $('#Ingredients').val();
-        var instructions = $('#Instructions').val();
-        var category = $('select[aria-label="category"]').val();
-        var origin = $('select[aria-label="origins"]').val();
-
-        // Perform form validation
-        if (recipeName && ingredients && instructions && category && origin) {
-            let newRecipe = {
-                recipeName: recipeName,
-                ingredients: ingredients,
-                instructions: instructions,
-                category: category,
-                origin: origin
-            };
-
-            // Push new recipe to data array
-            data.push(newRecipe);
-
-            // Update window.__recipes with the modified data
-            window.__recipes = data;
-
-            // Log updated data
-            console.log('Updated Recipes Data:', window.__recipes);
-
-            // Reset form
-            $('form')[0].reset();
-        } //else {
-            //alert('Please fill in all fields.');
-        //}
-   });
 });
-*/
+
+function addRecipe(recipes, newRecipe) {
+    // Assign a new unique ID based on the current array length
+    newRecipe.id = recipes.length + 1;
+  
+    // Add the new recipe to the end of the array
+    recipes.push(newRecipe);
+    user.recipes.push(newRecipe);
+    localStorage.setItem(window.__storageKeys.recipes, recipes);
+    localStorage.setItem(window.__storageKeys.user, user);
+  
+    console.log("Recipe added successfully with ID:", newRecipe.id);
+  }
+

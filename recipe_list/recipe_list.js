@@ -2,9 +2,10 @@
 // Student Id: 8969625
 
 
-// get recipes data from window object
-const recipes = window.__recipes;
 // getting user details from local storage
+// get recipes data from window.__recipes
+localStorage.setItem( window.__storageKeys.recipes,window.__recipes);
+const recipes = JSON.parse(localStorage.getItem(window.__storageKeys.recipes));
 let user = JSON.parse(localStorage.getItem(window.__storageKeys.user));
 let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn));
 
@@ -16,10 +17,7 @@ let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn
   if (isLoggedIn && isLoggedIn != null) {
     $("#add-recipe").show();
     $("#logbtn").text("Logout");
-  } else if(user) {
-    localStorage.setItem(window.__storageKeys.isLoggedIn, true);
-    $(location).attr("href", "/recipe_list");
-}
+  }
   else {
     $('#profile').hide();
         $('#logbtn').text('Login');
@@ -111,10 +109,11 @@ let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn
     const likeBtn = document.createElement("button");
     likeBtn.textContent = "Like";
     likeBtn.classList.add("like-btn", "btn", "btn-warning", "me-3");
+    likeBtn.id = recipe.id;
     likeBtn.addEventListener("click", () => {
       addToLikedRecipe(recipe);
       likeBtn.textContent = "Liked";
-      $(".like-btn").attr("disabled", true);
+      $(`#${recipe.id}`).attr("disabled", true);
     });
     divElement.appendChild(likeBtn);
     // checking if recipie is already liked.
