@@ -62,7 +62,7 @@ function getTabdata() {
     if(user.recipes && user.recipes.length ) {
         user.recipes.forEach(recipe => {
             const html = `
-            <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="col-sm-12 col-md-6 col-lg-3 my-3">
 
             <div class="card" style="width: 18rem;">
       <img src="${recipe.imgSrc}" class="card-img-top" alt="${recipe.title}">
@@ -89,7 +89,7 @@ function getTabdata() {
         
         user.likedRecipes.forEach(recipe => {
         const html = `
-        <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="col-sm-12 col-md-6 col-lg-3 my-3">
 
         <div class="card" style="width: 18rem;">
   <img src="${recipe.imgSrc}" class="card-img-top" alt="${recipe.title}">

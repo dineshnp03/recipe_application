@@ -102,7 +102,7 @@ function addRecipe(recipes, newRecipe) {
     // Add the new recipe to the end of the array
     recipes.push(newRecipe);
     user.recipes.push(newRecipe);
-    localStorage.setItem(window.__storageKeys.recipes, recipes);
+    localStorage.setItem(window.__storageKeys.recipes, JSON.stringify(recipes));
     localStorage.setItem(window.__storageKeys.user, user);
   
     console.log("Recipe added successfully with ID:", newRecipe.id);
