@@ -41,18 +41,7 @@
     float: right;
 }
 
-.read-more-btn {
-    width: 100%;
-    padding: 8px 0;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
 
-.read-more-btn:hover {
-    background-color: #0056b3;
-}
 
 .bxslider{
     width: 100% !important;
@@ -67,5 +56,11 @@
     width: 100%;
     height: 350px;
 
+}
+
+@media screen and (max-width: 768px) {
+    #add-recipe {
+        width: 100%;
+    }
 }
   

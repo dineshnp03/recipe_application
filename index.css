@@ -44,22 +44,26 @@ body {
   background-position: center;
   padding: 5rem;
 }
-label{
+label {
   font-weight: bold;
 }
 
 .scrolling-text {
   text-align: end;
-  width: 100%;  
+  width: 100%;
   overflow: hidden;
   animation: scrolltext 10s linear infinite;
-  white-space: nowrap;  
+  white-space: nowrap;
+}
+@keyframes scrolltext {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-100%);
+  } /* Adjust distance for scrolling */
 }
 
-@keyframes scrolltext {
-  from { transform: translateX(0px); }
-  to { transform: translateX(-100%); } /* Adjust distance for scrolling */
-}
 .card:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transform: translateY(-5px);
@@ -91,14 +95,25 @@ label{
   justify-content: center;
   align-items: center;
 }
-.view-all:hover  #view-all-text{
-text-decoration: underline;
+.view-all:hover #view-all-text {
+  text-decoration: underline;
+}
+.overlay {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
 }
 
 .container {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    border-radius: 12px;
-    padding: 3rem;
+  border-radius: 12px;
+  padding: 3rem;
+  margin: 1rem auto;
 }
 
 @media screen and (max-width: 768px) {
