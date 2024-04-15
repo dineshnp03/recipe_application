@@ -2,6 +2,7 @@
 // Student Id: 8886951
 
 
+let recipes = JSON.parse(localStorage.getItem(window.__storageKeys.recipes))
 $(document).ready(function () {
     let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn));
     let user = JSON.parse(localStorage.getItem(window.__storageKeys.user));
@@ -61,8 +62,7 @@ function fetchJSDataGET() {
             eval(jsCode);
 
             //store data in array
-            productsArray = window.__recipes;
-
+            productsArray = recipes;
             //count length of the array
             let count = productsArray.length;
 
