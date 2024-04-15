@@ -1,12 +1,12 @@
 // get recipes data from window.__recipes
 const recipes = window.__recipes;
+let user = JSON.parse(localStorage.getItem(window.__storageKeys.user));
+let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn));
 
   $(() => {
   
   $("#add-recipe").hide();
-  let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn));
 
-  let user = JSON.parse(localStorage.getItem(window.__storageKeys.user));
   console.log(isLoggedIn);
   if (isLoggedIn && isLoggedIn != null) {
     $("#add-recipe").show();
