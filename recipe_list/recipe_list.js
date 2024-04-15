@@ -1,4 +1,5 @@
 const recipes =  window.__recipes;
+let user = {};
 console.log(recipes);
 
 $(() => {
@@ -9,6 +10,7 @@ $(() => {
   if (isLoggedIn) {
     $('#add-recipe').show();
     $("#logbtn").text("Logout");
+    user = JSON.parse(localStorage.getItem(window.__storageKeys.user));
   } else {
     $("#logbtn").click((e) => {
       e.preventDefault();
@@ -83,18 +85,49 @@ $(() => {
         porigin.appendChild(strongOrigin);
         porigin.innerHTML += " " + recipe.origin;
         recipeContent.appendChild(porigin);
-        
+
+
+        const divElement = document.createElement("div");
+        divElement.classList.add("d-flex", "justify-content-center", "m-3");
+
+        const likeBtn = document.createElement("button");
+        likeBtn.textContent = "Like";
+        likeBtn.classList.add("like-btn", "btn", "btn-warning", "me-3");
+        likeBtn.addEventListener("click", () => {
+           addToLikedRecipe(recipe);
+           likeBtn.textContent = "Liked";
+           $(".like-btn").attr("disabled", true);
+        });
+        divElement.appendChild(likeBtn);
+if(user.likedRecipes) {
+
+  let likedOne = hasValueInUser(user.likedRecipes, recipe.id);
+  console.log(likedOne)
+  if(likedOne) {
+    
+    likeBtn.textContent = "Liked";
+    likeBtn.setAttribute("disabled", true);
+  }
+}
         
         const readMoreBtn = document.createElement("button");
         readMoreBtn.textContent = "Read More";
-        readMoreBtn.classList.add("read-more-btn");
+        readMoreBtn.classList.add("read-more-btn", "btn", "btn-danger", "me-3");
         readMoreBtn.addEventListener("click", () => {
-           getId(recipe.id);
+          getId(recipe.id);
         });
-        recipeContent.appendChild(readMoreBtn);
+        divElement.appendChild(readMoreBtn);
+        recipeContent.appendChild(divElement);
     
        recipeContainer.append(recipeCard);
     });
+
+    if(isLoggedIn) {
+      $(".likeBtn").show();
+
+    } else {
+      $(".likeBtn").hide();
+    }
   
        // Logout FUnctionality
        $('#logbtn').click((e) => { 
@@ -116,4 +149,14 @@ function getId(productId) {
 
 function redirectTo() {
   window.location.href = "../add_recipe/index.html";
+}
+
+
+function addToLikedRecipe(recipe) {
+  user.likedRecipes.push(recipe);
+  localStorage.setItem(window.__storageKeys.user, JSON.stringify(user));
+}
+
+function hasValueInUser(arr, id) {
+  return arr.some(obj => obj.id === id);
 }
