@@ -6,15 +6,13 @@
 let user = JSON.parse(localStorage.getItem(window.__storageKeys.user));
 $(() => {
     let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn))
-    // isLoggedIn = undefined ? false : true;
     console.log(isLoggedIn)
-    if(isLoggedIn) {
+    if(isLoggedIn && isLoggedIn != null) {
         $('#profile').show();
         $('#logbtn').text('Logout');
     } else {
         $('#profile').hide();
         $('#logbtn').text('Login');
-        $(location).attr("href", "/registration");
         $('#logbtn').click((e) => { 
             e.preventDefault();
             $(location).attr("href", "/registration");
