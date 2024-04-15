@@ -9,6 +9,7 @@ window.__recipes = [
   {
     id: 1,
     title: "Spaghetti Carbonara",
+    imgSrc: "/assets/recipe_list/Spaghetti.jpg",
     ingredients:
       "Spaghetti, Pancetta or guanciale, Eggs, Parmesan cheese, Black pepper, Salt",
     instructions:
@@ -19,6 +20,7 @@ window.__recipes = [
   {
     id: 2,
     title: "Chicken Tikka Masala",
+    imgSrc: "/assets/recipe_list/chicken_butter_masala.jpg",
     ingredients:
       "Chicken breasts, Yogurt, Lemon juice, Ginger garlic paste, Garam masala, Paprika, Turmeric, Cumin, Tomato sauce, Heavy cream, Onion, Butter, Vegetable oil, Salt",
     instructions:
@@ -29,6 +31,7 @@ window.__recipes = [
   {
     id: 3,
     title: "Caesar Salad",
+    imgSrc: "/assets/recipe_list/Caesar.jpg",
     ingredients:
       "Romaine lettuce, Croutons, Parmesan cheese, Caesar dressing (anchovies, Garlic, Dijon mustard, Worcestershire sauce, Lemon juice, Olive oil, Salt, Black pepper)",
     instructions:
@@ -39,6 +42,7 @@ window.__recipes = [
   {
     id: 4,
     title: "Sushi Rolls",
+    imgSrc: "/assets/recipe_list/Sushi.jpg",
     ingredients:
       "Sushi rice, Nori seaweed sheets, Fish (such as tuna, salmon, or yellowtail), Vegetables (such as cucumber, avocado, or carrot), Soy sauce, Wasabi, Pickled ginger",
     instructions:
@@ -49,6 +53,7 @@ window.__recipes = [
   {
     id: 5,
     title: "Beef Stroganoff",
+    imgSrc: "/assets/recipe_list/Beef Stroganoff.jpg",
     ingredients:
       "Beef sirloin, Mushrooms, Onion, Garlic, Beef broth, Sour cream, Dijon mustard, Worcestershire sauce, Egg noodles, Butter, Olive oil, Salt, Black pepper",
     instructions:
@@ -59,6 +64,7 @@ window.__recipes = [
   {
     id: 6,
     title: "Guacamole",
+    imgSrc: "/assets/recipe_list/Guacamole.jpg",
     ingredients:
       "Avocado, Lime juice, Tomato, Red onion, Jalapeno pepper, Garlic, Cilantro, Salt, Black pepper",
     instructions:
@@ -69,6 +75,7 @@ window.__recipes = [
   {
     id: 7,
     title: "Tiramisu",
+    imgSrc: "/assets/recipe_list/Tiramisu.jpg",
     ingredients:
       "Ladyfingers, Espresso coffee, Mascarpone cheese, Eggs, Sugar, Cocoa powder, Marsala wine (optional)",
     instructions:
@@ -79,6 +86,7 @@ window.__recipes = [
   {
     id: 8,
     title: "Moussaka",
+    imgSrc: "/assets/recipe_list/Moussaka.jpg",
     ingredients:
       "Eggplant, Potatoes, Ground beef or lamb, Onion, Garlic, Tomato sauce, Red wine (optional), Cinnamon, Nutmeg, All-purpose flour, Milk, Butter, Parmesan cheese, Salt, Black pepper, Olive oil",
     instructions:
@@ -89,6 +97,7 @@ window.__recipes = [
   {
     id: 9,
     title: "Pad Thai",
+    imgSrc: "/assets/recipe_list/Pad Thai.jpg",
     ingredients:
       "Rice noodles, Shrimp, Tofu, Eggs, Bean sprouts, Garlic, Shallots, Peanuts, Green onions, Vegetable oil, Tamarind paste, Fish sauce, Soy sauce, Sugar, Chili flakes, Lime",
     instructions:
@@ -99,6 +108,7 @@ window.__recipes = [
   {
     id: 10,
     title: "Ratatouille",
+    imgSrc: "/assets/recipe_list/Ratatouille.jpg",
     ingredients:
       "Eggplant, Zucchini, Bell peppers, Onion, Garlic, Tomato sauce, Tomatoes, Olive oil, Herbs de Provence, Salt, Black pepper",
     instructions:
@@ -109,6 +119,7 @@ window.__recipes = [
   {
     id: 11,
     title: "Pho",
+    imgSrc: "/assets/recipe_list/Pho.jpg",
     ingredients:
       "Beef bones, Beef brisket or steak, Rice noodles, Onion, Ginger, Star anise, Cinnamon stick, Cloves, Cardamom pods, Fish sauce, Sugar, Lime, Bean sprouts, Thai basil, Cilantro, Jalapeno peppers",
     instructions:
@@ -119,6 +130,7 @@ window.__recipes = [
   {
     id: 12,
     title: "Shakshuka",
+    imgSrc: "/assets/recipe_list/Shakshuka.jpg",
     ingredients:
       "Eggs, Tomato sauce, Bell peppers, Onion, Garlic, Cumin, Paprika, Chili flakes, Olive oil, Salt, Black pepper, Parsley",
     instructions:
@@ -129,6 +141,7 @@ window.__recipes = [
   {
     id: 13,
     title: "Gyoza",
+    imgSrc: "/assets/recipe_list/Gyoza.jpg",
     ingredients:
       "Gyoza wrappers, Ground pork, Cabbage, Garlic, Ginger, Soy sauce, Sesame oil, Green onions, Salt, Black pepper, Dipping sauce (soy sauce, rice vinegar, sesame oil, chili oil)",
     instructions:
@@ -139,6 +152,7 @@ window.__recipes = [
   {
     id: 14,
     title: "Chicken Curry",
+    imgSrc: "/assets/recipe_list/Chicken Curry.jpg",
     ingredients:
       "Chicken thighs, Curry powder, Onion, Garlic, Ginger, Coconut milk, Tomato paste, Potatoes, Carrots, Green peas, Vegetable oil, Salt, Black pepper, Rice",
     instructions:
@@ -149,6 +163,7 @@ window.__recipes = [
   {
     id: 15,
     title: "Hamburger",
+    imgSrc: "/assets/recipe_list/Hamburger.jpg",
     ingredients:
       "Ground beef, Hamburger buns, Lettuce, Tomato, Onion, Pickles, Cheese slices, Ketchup, Mustard, Mayonnaise, Salt, Black pepper",
     instructions:
@@ -159,6 +174,7 @@ window.__recipes = [
   {
     id: 16,
     title: "Tandoori Chicken",
+    imgSrc: "/assets/recipe_list/Tandoori Chicken.jpg",
     ingredients:
       "Chicken drumsticks or thighs, Yogurt, Lemon juice, Ginger garlic paste, Tandoori masala, Turmeric, Red chili powder, Cumin powder, Coriander powder, Garam masala, Salt, Vegetable oil",
     instructions:
@@ -169,6 +185,7 @@ window.__recipes = [
   {
     id: 17,
     title: "Paella",
+    imgSrc: "/assets/recipe_list/Paella.jpg",
     ingredients:
       "Rice, Chicken thighs, Chorizo sausage, Shrimp, Clams, Mussels, Onion, Garlic, Bell peppers, Tomato, Saffron threads, Smoked paprika, Chicken broth, Olive oil, Lemon wedges, Parsley",
     instructions:
@@ -179,6 +196,7 @@ window.__recipes = [
   {
     id: 18,
     title: "Risotto",
+    imgSrc: "/assets/recipe_list/Risotto.jpg",
     ingredients:
       "Arborio rice, Chicken or vegetable broth, Onion, Garlic, White wine, Parmesan cheese, Butter, Olive oil, Salt, Black pepper",
     instructions:
@@ -189,6 +207,7 @@ window.__recipes = [
   {
     id: 19,
     title: "Falafel",
+    imgSrc: "/assets/recipe_list/Falafel.jpg",
     ingredients:
       "Chickpeas, Onion, Garlic, Fresh parsley, Cilantro, Cumin, Coriander, Baking powder, Salt, Black pepper, Flour, Vegetable oil (for frying)",
     instructions:
@@ -199,6 +218,7 @@ window.__recipes = [
   {
     id: 20,
     title: "Philly Cheesesteak Sandwich",
+    imgSrc: "/assets/recipe_list/Philly Cheesesteak Sandwich.jpg",
     ingredients:
       "Ribeye steak, Hoagie rolls, Bell peppers, Onion, Mushrooms, Provolone cheese, Olive oil, Salt, Black pepper",
     instructions:
@@ -209,6 +229,7 @@ window.__recipes = [
   {
     id: 21,
     title: "Beef Wellington",
+    imgSrc: "/assets/recipe_list/Beef Wellington.jpg",
     ingredients:
       "Beef tenderloin, Puff pastry, Prosciutto, Mushroom duxelles, Egg, Butter, Olive oil, Salt, Black pepper",
     instructions:
@@ -219,6 +240,7 @@ window.__recipes = [
   {
     id: 22,
     title: "Peking Duck",
+    imgSrc: "/assets/recipe_list/Peking Duck.jpg",
     ingredients:
       "Duck, Soy sauce, Honey, Hoisin sauce, Rice vinegar, Garlic, Ginger, Star anise, Cinnamon stick, Scallions, Cucumber, Pancakes",
     instructions:
@@ -229,6 +251,7 @@ window.__recipes = [
   {
     id: 23,
     title: "Goulash",
+    imgSrc: "/assets/recipe_list/Goulash.jpg",
     ingredients:
       "Beef chuck, Onion, Garlic, Bell peppers, Carrots, Potatoes, Tomato paste, Paprika, Caraway seeds, Beef broth, Sour cream, Flour, Olive oil, Salt, Black pepper",
     instructions:
@@ -239,6 +262,7 @@ window.__recipes = [
   {
     id: 24,
     title: "Samosa",
+    imgSrc: "/assets/recipe_list/Samosa.jpg",
     ingredients:
       "Potatoes, Peas, Onion, Garlic, Ginger, Green chili, Coriander seeds, Cumin seeds, Garam masala, Turmeric, Coriander powder, Salt, Black pepper, Pastry dough (flour, water, salt, oil)",
     instructions:
@@ -249,6 +273,7 @@ window.__recipes = [
   {
     id: 25,
     title: "Ratatouille",
+    imgSrc: "/assets/recipe_list/Ratatouille.jpg",
     ingredients:
       "Eggplant, Zucchini, Bell peppers, Onion, Garlic, Tomato sauce, Tomatoes, Olive oil, Herbs de Provence, Salt, Black pepper",
     instructions:
@@ -259,6 +284,7 @@ window.__recipes = [
   {
     id: 26,
     title: "Pav Bhaji",
+    imgSrc: "/assets/recipe_list/Pav Bhaji.jpg",
     ingredients:
       "Potatoes, Cauliflower, Green peas, Bell peppers, Onion, Tomato, Garlic, Ginger, Green chili, Pav buns, Butter, Olive oil, Pav bhaji masala, Salt, Black pepper, Lemon wedges, Cilantro",
     instructions:
@@ -269,6 +295,7 @@ window.__recipes = [
   {
     id: 27,
     title: "Tom Yum Soup",
+    imgSrc: "/assets/recipe_list/Tom Yum Soup.jpg",
     ingredients:
       "Shrimp, Lemongrass, Galangal, Kaffir lime leaves, Thai chili peppers, Mushrooms, Tomato, Onion, Fish sauce, Lime juice, Sugar, Cilantro",
     instructions:
@@ -279,6 +306,7 @@ window.__recipes = [
   {
     id: 28,
     title: "Biryani",
+    imgSrc: "/assets/recipe_list/Biryani.jpg",
     ingredients:
       "Basmati rice, Chicken or mutton, Yogurt, Onion, Tomato, Garlic, Ginger, Green chili, Mint leaves, Cilantro, Garam masala, Turmeric, Saffron, Milk, Ghee, Salt",
     instructions:
@@ -289,6 +317,7 @@ window.__recipes = [
   {
     id: 29,
     title: "Pasta Carbonara",
+    imgSrc: "/assets/recipe_list/Pasta Carbonara.jpg",
     ingredients:
       "Spaghetti, Pancetta or guanciale, Eggs, Parmesan cheese, Black pepper, Salt",
     instructions:
@@ -299,6 +328,7 @@ window.__recipes = [
   {
     id: 30,
     title: "Chicken Alfredo",
+    imgSrc: "/assets/recipe_list/Chicken Alfredo.jpg",
     ingredients:
       "Fettuccine pasta, Chicken breasts, Heavy cream, Parmesan cheese, Butter, Garlic, Olive oil, Salt, Black pepper, Parsley",
     instructions:
@@ -334,4 +364,3 @@ window.__origins = [
   "China",
   "Hungary",
 ];
-

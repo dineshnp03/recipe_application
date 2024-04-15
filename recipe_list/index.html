@@ -22,10 +22,24 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="recipe_list.js"></script>
     <script src="/constants.js"></script>
+    <script src="recipe_list.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
   </head>
   <body>
-
+    
+    <header>Recipe list</header>
+    <section class="recipe-list">
+              <ul class="bxslider">
+                <li><img src="/assets/recipe_list/slider1.jpg" alt="banner-img"  class="boxSize"></li>
+                <li><img src="/assets/recipe_list/slider2.jpg"  alt="banner-img" class="boxSize"></li>
+                <li><img src="/assets/recipe_list/slider3.jpg"  alt="banner-img" class="boxSize"></li>
+              </ul>
+    </section>
+    
+    <div id="recipeContainer" class="recipe-container">
+      
+    </div>
   </body>
 </html>
