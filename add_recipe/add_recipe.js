@@ -61,6 +61,7 @@ $(document).ready(function() {
 
         // Push new recipe to data array
         data.push(newRecipe);
+        addRecipe(data, newRecipe);
 
         // Update window.__recipes with the modified data
         window.__recipes = data;
@@ -69,60 +70,17 @@ $(document).ready(function() {
         console.log('Updated Recipes Data:', window.__recipes);
         // Reset form
      //   $('form')[0].reset();
-    } /*else {
-        alert('Please fill in all fields.');
-    }*/
+    } 
 });
 
 });
 
-/*$(document).ready(function() {
-    let data = window.__recipes || []; // Initialize data or get existing data if available
-    console.log(data);
-
-    // Textarea auto-resize
-    $('textarea').each(function() {
-        this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
-    }).on('input', function() {
-        this.style.height = 'auto';
-        this.style.height = (this.scrollHeight) + 'px';
-    });
-
-    // Form submission
-    $('form').submit(function(event) {
-        event.preventDefault(); // Prevent form submission
-
-        // Get form data
-        var recipeName = $('#Recipe_name').val(); // Changed from 'Recipe name' to 'Recipe_name'
-        var ingredients = $('#Ingredients').val();
-        var instructions = $('#Instructions').val();
-        var category = $('select[aria-label="category"]').val();
-        var origin = $('select[aria-label="origins"]').val();
-
-        // Perform form validation
-        if (recipeName && ingredients && instructions && category && origin) {
-            let newRecipe = {
-                recipeName: recipeName,
-                ingredients: ingredients,
-                instructions: instructions,
-                category: category,
-                origin: origin
-            };
-
-            // Push new recipe to data array
-            data.push(newRecipe);
-
-            // Update window.__recipes with the modified data
-            window.__recipes = data;
-
-            // Log updated data
-            console.log('Updated Recipes Data:', window.__recipes);
-
-            // Reset form
-            $('form')[0].reset();
-        } //else {
-            //alert('Please fill in all fields.');
-        //}
-   });
-});
-*/
+function addRecipe(recipes, newRecipe) {
+    // Assign a new unique ID based on the current array length
+    newRecipe.id = recipes.length + 1;
+  
+    // Add the new recipe to the end of the array
+    recipes.push(newRecipe);
+  
+    console.log("Recipe added successfully with ID:", newRecipe.id);
+  }

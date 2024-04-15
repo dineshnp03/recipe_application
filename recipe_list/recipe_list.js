@@ -106,10 +106,11 @@ let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn
     const likeBtn = document.createElement("button");
     likeBtn.textContent = "Like";
     likeBtn.classList.add("like-btn", "btn", "btn-warning", "me-3");
+    likeBtn.id = recipe.id;
     likeBtn.addEventListener("click", () => {
       addToLikedRecipe(recipe);
       likeBtn.textContent = "Liked";
-      $(".like-btn").attr("disabled", true);
+      $(`#${recipe.id}`).attr("disabled", true);
     });
     divElement.appendChild(likeBtn);
     if (user.likedRecipes) {
