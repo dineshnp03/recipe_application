@@ -5,6 +5,8 @@
 let user = JSON.parse(localStorage.getItem(window.__storageKeys.user));
 let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn));
 $(() => {
+
+    // checking the user is logged in or not
   console.log(isLoggedIn);
   if (isLoggedIn) {
     $("#logbtn").text("Logout");
@@ -30,6 +32,8 @@ $(() => {
         }, 1000)
         }
     });
+
+    // Banner dynamic data rendering
   $(".banner").text(`Hey, ${user.username}`);
 
   $("#profile-image").css({
@@ -48,10 +52,12 @@ $(() => {
 
   $( "#tabs" ).tabs();
 
+//    calling the tab data
   getTabdata();
 
 });
 
+// Tab function showing recipes if data is there or show a "No recipe display"
 function getTabdata() {  
     if(user.recipes && user.recipes.length ) {
         user.recipes.forEach(recipe => {
@@ -106,6 +112,7 @@ $('#liked-recipes').append(html);
     }
 }
 
+// when you click on know more redirect to recipe details
 
 function goToRecipe(recipe) {
     localStorage.setItem(window.__storageKeys.productId, recipe);

@@ -94,6 +94,7 @@ $(document).ready(function() {
 
 });
 
+// Add Recipe Functionality
 function addRecipe(recipes, newRecipe) {
     // Assign a new unique ID based on the current array length
     newRecipe.id = recipes.length + 1;

@@ -4,8 +4,8 @@
 
 // getting user details from local storage
 // get recipes data from window.__recipes
-localStorage.setItem( window.__storageKeys.recipes,window.__recipes);
-const recipes = JSON.parse(localStorage.getItem(window.__storageKeys.recipes));
+localStorage.setItem( window.__storageKeys.recipes,JSON.stringify(window.__recipes));
+let recipes = JSON.parse(localStorage.getItem(window.__storageKeys.recipes));
 let user = JSON.parse(localStorage.getItem(window.__storageKeys.user));
 let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn));
 
