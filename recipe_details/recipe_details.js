@@ -1,3 +1,7 @@
+// Author: Vaghasiya, Harshitaben Dineshbhai
+// Student Id: 8886951
+
+
 $(document).ready(function () {
     let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn));
     let user = JSON.parse(localStorage.getItem(window.__storageKeys.user));
@@ -32,7 +36,7 @@ $(document).ready(function () {
         slideWidth: 600,
         pause: 3000
     });
-    // Logout FUnctionality
+    // Logout Functionality
     $('#logbtn').click((e) => {
         console.log("coming here")
         if (isLoggedIn) {
@@ -85,12 +89,12 @@ function changeItem(productsArray, count) {
             let product = productsArray.find((e) => e.id == prd_id);
             // set the title
             $('#recipe_name').text(product.title);
-            //split the ingridients by , and display it in new row in list 
+            //split the ingridients by  and display it in new row in list 
             let ingredients = product.ingredients.split(',');
             let ingredientsHTML = ingredients.map(ingredient => '<li>' + ingredient.trim() + '</li>').join('');
             $('.recipe-ingredients').html('<ul>' + ingredientsHTML + '</ul>');
 
-            //split the instructions by . and display it in new row in list
+            //split the instructions by and display it in new row in list
             let instructions = product.instructions.split('.');
             let instructionsHTML = instructions.map(instruction => '<li>' + instruction.trim() + '.</li>').join('');
             $('.recipe-instructions').html('<ul>' + instructionsHTML + '</ul>');

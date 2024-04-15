@@ -1,5 +1,10 @@
-// get recipes data from window.__recipes
+// Author: Darbar, Virajsinh Maheshbhai
+// Student Id: 8969625
+
+
+// get recipes data from window object
 const recipes = window.__recipes;
+// getting user details from local storage
 let user = JSON.parse(localStorage.getItem(window.__storageKeys.user));
 let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn));
 
@@ -99,10 +104,10 @@ let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn
     porigin.appendChild(strongOrigin);
     porigin.innerHTML += " " + recipe.origin;
     recipeContent.appendChild(porigin);
-
+   
     const divElement = document.createElement("div");
     divElement.classList.add("d-flex", "justify-content-center", "m-3");
-
+     //creating like button and readmore
     const likeBtn = document.createElement("button");
     likeBtn.textContent = "Like";
     likeBtn.classList.add("like-btn", "btn", "btn-warning", "me-3");
@@ -112,6 +117,7 @@ let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn
       $(".like-btn").attr("disabled", true);
     });
     divElement.appendChild(likeBtn);
+    // checking if recipie is already liked.
     if (user.likedRecipes) {
       let likedOne = hasValueInUser(user.likedRecipes, recipe.id);
       console.log(likedOne);
@@ -139,7 +145,7 @@ let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn
     $(".likeBtn").hide();
   }
 
-  // Logout FUnctionality
+  // Logout Function
   $("#logbtn").click((e) => {
     console.log("coming here");
     if (isLoggedIn) {
@@ -152,7 +158,7 @@ let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn
   });
 });
 
-
+//function to set productid and redirect to recipe details page.
 function getId(productId) {
   localStorage.setItem(window.__storageKeys.productId, productId);
   window.location.href = "../recipe_details/index.html";
@@ -161,12 +167,12 @@ function getId(productId) {
 function redirectTo() {
   window.location.href = "../add_recipe/index.html";
 }
-
+//function to add reciepe to liked.
 function addToLikedRecipe(recipe) {
   user.likedRecipes.push(recipe);
   localStorage.setItem(window.__storageKeys.user, JSON.stringify(user));
 }
-
+//function to check if recipe is liked by user
 function hasValueInUser(arr, id) {
   return arr.some((obj) => obj.id === id);
 }
