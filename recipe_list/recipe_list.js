@@ -130,6 +130,7 @@ let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn
     const readMoreBtn = document.createElement("button");
     readMoreBtn.textContent = "Read More";
     readMoreBtn.classList.add("read-more-btn", "btn", "btn-danger", "me-3");
+    // add event listener to readmore
     readMoreBtn.addEventListener("click", () => {
       getId(recipe.id);
     });
