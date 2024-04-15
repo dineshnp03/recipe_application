@@ -103,7 +103,7 @@ function addRecipe(recipes, newRecipe) {
     recipes.push(newRecipe);
     user.recipes.push(newRecipe);
     localStorage.setItem(window.__storageKeys.recipes, JSON.stringify(recipes));
-    localStorage.setItem(window.__storageKeys.user, user);
+    localStorage.setItem(window.__storageKeys.user, JSON.stringify(user));
   
     console.log("Recipe added successfully with ID:", newRecipe.id);
   }
