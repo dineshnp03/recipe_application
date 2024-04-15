@@ -1,7 +1,7 @@
 // Author: Venkat Lavu
 // Student Id: 8968788
 
-
+let user = JSON.parse(localStorage.getItem(window.__storageKeys.user))
 $(document).ready(function() {
 
     // Loggin error check
