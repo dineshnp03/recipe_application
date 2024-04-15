@@ -71,7 +71,7 @@ function getTabdata() {
         <p class="card-text">${recipe.ingredients}</p>
       </div>
       <div class="card-body">
-        <a class="card-link  cursor text-light" onclick="goToRecipe(${recipe})">know more</a>
+        <a class="card-link  cursor text-light" onclick="goToRecipe(${recipe.id})">know more</a>
       </div>
     </div>
     </div>`;
