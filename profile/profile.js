@@ -50,20 +50,60 @@ $(() => {
 
 function getTabdata() {  
     if(user.recipes && user.recipes.length ) {
+        user.recipes.forEach(recipe => {
+            const html = `
+            <div class="col-sm-12 col-md-6 col-lg-3">
+
+            <div class="card" style="width: 18rem;">
+      <img src="${recipe.imgSrc}" class="card-img-top" alt="${recipe.title}">
+      <div class="card-body">
+        <h5 class="card-title  text-info fw-bold fst-italic">${recipe.title}</h5>
+        <p class="card-text">${recipe.ingredients}</p>
+      </div>
+      <div class="card-body">
+        <a class="card-link  cursor text-light" onclick="goToRecipe(${recipe})">know more</a>
+      </div>
+    </div>
+    </div>`;
+    $('#my-recipes').append(html); ;
+        });
+
     } else {
-        const html = `<div class="row">
-            <div class="d-flex justify-content-center align-items-center no-data-display"><p>No Recipes to display!</p></div>
-        </div>`;
+        const html = `
+            <div class="d-flex justify-content-center align-items-center no-data-display"><p>No Recipes to display!</p></div>`;
         $('#my-recipes').append(html); ;
     }
 
 
     if(user.likedRecipes && user.likedRecipes.length) {
+        
+        user.likedRecipes.forEach(recipe => {
+        const html = `
+        <div class="col-sm-12 col-md-6 col-lg-3">
 
+        <div class="card" style="width: 18rem;">
+  <img src="${recipe.imgSrc}" class="card-img-top" alt="${recipe.title}">
+  <div class="card-body">
+    <h5 class="card-title text-info fw-bold fst-italic">${recipe.title}</h5>
+    <p class="card-text">${recipe.ingredients}</p>
+  </div>
+  <div class="card-body">
+    <a class="card-link cursor text-light" onclick="goToRecipe(${recipe.id})">know more</a>
+  </div>
+</div>
+</div>`;
+$('#liked-recipes').append(html); 
+        });
     } else {
         const html = `<div class="row">
             <div class="d-flex justify-content-center align-items-center no-data-display"><p>No Liked Recipes to display!</p></div>
         </div>`;
-        $('#liked-recipes').append(html); ;
+        $('#liked-recipes').append(html); 
     }
+}
+
+
+function goToRecipe(recipe) {
+    localStorage.setItem(window.__storageKeys.productId, recipe);
+    window.location.href = "../recipe_details/index.html";
 }
