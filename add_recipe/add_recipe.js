@@ -1,8 +1,33 @@
 
     //console.log(window.__recipes);
 $(document).ready(function() {
+
     let data=window.__recipes
     console.log(data)
+    let isLoggedIn = window.__storageKeys.isLoggedIn;
+    console.log(isLoggedIn);
+    if (isLoggedIn) {
+      $("#logbtn").text("Logout");
+    } else {
+      $("#logbtn").click((e) => {
+        e.preventDefault();
+        $(location).attr("href", "/registration");
+      });
+    }
+
+       // Logout FUnctionality
+       $('#logbtn').click((e) => { 
+        console.log("coming here")
+        if(isLoggedIn) {
+        console.log("coming here")
+        localStorage.setItem(window.__storageKeys.isLoggedIn , false);
+        setTimeout(() => {
+            window.location.reload();
+        }, 1000)
+        }
+    });
+
+
     // Textarea auto-resize
     $('textarea').each(function() {
       this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');

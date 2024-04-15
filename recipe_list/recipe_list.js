@@ -2,9 +2,12 @@ const recipes =  window.__recipes;
 console.log(recipes);
 
 $(() => {
+  
+  $('#add-recipe').hide();
   let isLoggedIn = window.__storageKeys.isLoggedIn;
   console.log(isLoggedIn);
   if (isLoggedIn) {
+    $('#add-recipe').show();
     $("#logbtn").text("Logout");
   } else {
     $("#logbtn").click((e) => {
@@ -85,19 +88,32 @@ $(() => {
         const readMoreBtn = document.createElement("button");
         readMoreBtn.textContent = "Read More";
         readMoreBtn.classList.add("read-more-btn");
-        readMoreBtn.addEventListener("click", function() {
-           
-            
+        readMoreBtn.addEventListener("click", () => {
+           getId(recipe.id);
         });
         recipeContent.appendChild(readMoreBtn);
     
        recipeContainer.append(recipeCard);
     });
   
-   
+       // Logout FUnctionality
+       $('#logbtn').click((e) => { 
+        console.log("coming here")
+        if(isLoggedIn) {
+        console.log("coming here")
+        localStorage.setItem(window.__storageKeys.isLoggedIn , false);
+        setTimeout(() => {
+            window.location.reload();
+        }, 1000)
+        }
+    });
 });
 function getId(productId) {
  
-  sessionStorage.setItem("product_id", productId);
+  localStorage.setItem(window.__storageKeys.productId, productId);
   window.location.href = "../recipe_details/index.html";
+}
+
+function redirectTo() {
+  window.location.href = "../add_recipe/index.html";
 }

@@ -19,6 +19,17 @@ $(document).ready(function () {
         slideWidth: 600,
         pause: 3000
     });
+        // Logout FUnctionality
+        $('#logbtn').click((e) => { 
+            console.log("coming here")
+            if(isLoggedIn) {
+            console.log("coming here")
+            localStorage.setItem(window.__storageKeys.isLoggedIn , false);
+            setTimeout(() => {
+                window.location.reload();
+            }, 1000)
+            }
+        });
 
     fetchJSDataGET();
 });
@@ -44,11 +55,11 @@ function fetchJSDataGET() {
 
 function changeItem(productsArray, count) {
 ;
-    let prd_id = sessionStorage.getItem("product_id")
+    let prd_id = localStorage.getItem(window.__storageKeys.productId)
 
-    for (let i = 0; i < count; i++) {
+    for (let i = 1; i <= count; i++) {
         if (i == prd_id) {
-            let product = productsArray[i]
+            let product = productsArray.find((e) => e.id == prd_id);
 
             $('#recipe_name').text(product.title);
 

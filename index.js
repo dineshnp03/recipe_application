@@ -1,7 +1,10 @@
+// Author: Dinesh Narasimhalu Punniyamoorthy
+// Student Id: 8972738
+
+
+
 let user = JSON.parse(localStorage.getItem(window.__storageKeys.user));
 $(() => {
-    let textWidth = $(".scrolling-text").width();
-    let containerWidth = $(".scrolling-text").parent().width();
     let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn))
     // isLoggedIn = undefined ? false : true;
     console.log(isLoggedIn)
@@ -32,6 +35,7 @@ $(() => {
         }
     });
 
+    // Logout FUnctionality
     $('#logbtn').click((e) => { 
         console.log("coming here")
         if(isLoggedIn) {
@@ -39,7 +43,7 @@ $(() => {
         localStorage.setItem(window.__storageKeys.isLoggedIn , false);
         setTimeout(() => {
             window.location.reload();
-        }, 5000)
+        }, 1000)
         }
     });
 
