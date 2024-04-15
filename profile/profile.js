@@ -8,7 +8,14 @@ $(() => {
   console.log(isLoggedIn);
   if (isLoggedIn) {
     $("#logbtn").text("Logout");
-  } else {
+  } else if(user) {
+    localStorage.setItem(window.__storageKeys.isLoggedIn, true);
+    $(location).attr("href", "/profile");
+}
+  else {
+    $('#profile').hide();
+    $('#logbtn').text('Login');
+    $(location).attr("href", "/registration");
     $("#logbtn").click((e) => {
       e.preventDefault();
       $(location).attr("href", "/registration");

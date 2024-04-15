@@ -12,11 +12,18 @@ $(() => {
     $("#add-recipe").show();
     $("#logbtn").text("Logout");
     user = JSON.parse(localStorage.getItem(window.__storageKeys.user));
-  } else {
-    $("#logbtn").click((e) => {
-      e.preventDefault();
-      $(location).attr("href", "/registration");
-    });
+  } else if(user) {
+    localStorage.setItem(window.__storageKeys.isLoggedIn, true);
+    $(location).attr("href", "/recipe_list");
+}
+  else {
+    $('#profile').hide();
+        $('#logbtn').text('Login');
+        $(location).attr("href", "/registration");
+        $('#logbtn').click((e) => { 
+            e.preventDefault();
+            $(location).attr("href", "/registration");
+        }); 
   }
   $(document).ready(function () {
     // bxslider plugin for image slider

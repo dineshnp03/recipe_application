@@ -14,6 +14,7 @@ $(() => {
     } else {
         $('#profile').hide();
         $('#logbtn').text('Login');
+        $(location).attr("href", "/registration");
         $('#logbtn').click((e) => { 
             e.preventDefault();
             $(location).attr("href", "/registration");

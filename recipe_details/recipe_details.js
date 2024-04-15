@@ -1,10 +1,20 @@
 $(document).ready(function () {
     let isLoggedIn = JSON.parse(localStorage.getItem(window.__storageKeys.isLoggedIn));
+    let user = JSON.parse(localStorage.getItem(window.__storageKeys.user));
     console.log(isLoggedIn);
     if (isLoggedIn) {
+        
+        $('#profile').show();
         $("#logbtn").text("Logout");
-    } else {
-        $("#logbtn").click((e) => {
+    } else if(user) {
+        localStorage.setItem(window.__storageKeys.isLoggedIn, true);
+        $(location).attr("href", "/recipe_list");
+    }
+    else {
+        $('#profile').hide();
+        $('#logbtn').text('Login');
+        $(location).attr("href", "/registration");
+        $('#logbtn').click((e) => { 
             e.preventDefault();
             $(location).attr("href", "/registration");
         });
